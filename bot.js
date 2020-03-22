@@ -9,12 +9,8 @@ const updateData = arr => {
     if (! Array.isArray(arr)) return;
     const data = getData()
     arr.map(val => {
-        if (!(val in data)){
-            data[val] = 1;
-        }
-        else {
-            data[val]++
-        }
+        if (!(val in data)) data[val] = 1;
+        else data[val]++
     })
     fs.writeFileSync('./emoji_data.json', JSON.stringify(data, null, 4))
 }
@@ -28,6 +24,7 @@ bot.on("ready", () =>{
 })
 
 bot.on("message", msg => {
+    if (msg.author.id == 691156659376095264) return;
     const exp = /<:\w+:\d+>/g
     const matches = msg.content.match(exp)
     updateData(matches)
