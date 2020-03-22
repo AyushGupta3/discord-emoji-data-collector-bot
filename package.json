@@ -1,0 +1,22 @@
+{
+  "name": "discord-emoji-data-collector-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyushGupta3/discord-emoji-data-collector-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyushGupta3/discord-emoji-data-collector-bot/issues"
+  },
+  "homepage": "https://github.com/AyushGupta3/discord-emoji-data-collector-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.0.2"
+  }
+}

@@ -1,0 +1,6 @@
+#directory dependencies
+node_modules/
+
+#file dependencies
+package-lock.json
+emoji_data.json
