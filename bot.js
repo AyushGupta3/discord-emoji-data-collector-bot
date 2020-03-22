@@ -2,7 +2,8 @@ const Discord = require("discord.js")
 const moment = require('moment')
 const bot = new Discord.Client()
 const log = console.log
-const token = 'NjkxMTU2NjU5Mzc2MDk1MjY0.Xnb4FQ.bjd90lDJ0bvWud3rr8EjCaIXC6s'
+require('dotenv').config()
+const token = process.env.TOKEN
 const fs = require("fs")
 
 const getData = () => JSON.parse(fs.readFileSync("./emoji_data.json"))
