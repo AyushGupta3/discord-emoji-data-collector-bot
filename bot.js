@@ -49,7 +49,7 @@ bot.on("message", msg => {
         .setTitle("TOP 10 EMOJIS")
         let emojis = []
         let counts = []
-        let dates = []
+        // let dates = []
         data.map(o => {
            emojis.push(o.emoji)
            counts.push(o.count)
@@ -57,7 +57,7 @@ bot.on("message", msg => {
         })
         embed.addField("Emojis:", emojis.join("\n"), true)
         embed.addField("Counts:", counts.join("\n"), true)
-        embed.addField("Last Used", dates.join("\n"), true)
+        // embed.addField("Last Used", dates.join("\n"), true)
         msg.channel.sendEmbed(embed)
     }
 })
