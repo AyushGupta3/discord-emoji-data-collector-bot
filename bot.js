@@ -53,7 +53,7 @@ bot.on("message", msg => {
         data.map(o => {
            emojis.push(o.emoji)
            counts.push(o.count)
-           dates.push(o.last_used)
+        //    dates.push(o.last_used)
         })
         embed.addField("Emojis:", emojis.join("\n"), true)
         embed.addField("Counts:", counts.join("\n"), true)
