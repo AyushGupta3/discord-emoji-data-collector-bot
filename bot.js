@@ -40,7 +40,7 @@ bot.on("ready", () =>{
 
 bot.on("message", msg => {
     if (msg.author.id == 691156659376095264) return;
-    const exp = /<:\w+:\d+>/g
+    const exp = /<:(?!GW)\w+:\d+>/g
     const matches = msg.content.match(exp)
     updateData(matches)
     if (msg.content === "emoji stats"){
