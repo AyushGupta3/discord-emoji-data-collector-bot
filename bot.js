@@ -44,7 +44,21 @@ bot.on("message", msg => {
     const matches = msg.content.match(exp)
     updateData(matches)
     if (msg.content === "emoji stats"){
-        msg.channel.send(JSON.stringify(getData(), null, 4))
+        let data = getData().splice(0,9)
+        let embed = new Discord.RichEmbed()
+        .setTitle("TOP 10 EMOJIS")
+        let emojis = []
+        let counts = []
+        let dates = []
+        data.map(o => {
+           emojis.push(o.emoji)
+           counts.push(o.count)
+           dates.push(o.last_used)
+        })
+        embed.addField("Emojis:", emojis.join("\n"), true)
+        embed.addField("Counts:", counts.join("\n"), true)
+        embed.addField("Last Used", dates.join("\n"), true)
+        msg.channel.sendEmbed(embed)
     }
 })
 
